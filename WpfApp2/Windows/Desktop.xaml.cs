@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using WpfApp2.Data;
+
+namespace WpfApp2.Windows
+{
+    /// <summary>
+    /// Логика взаимодействия для Desktop.xaml
+    /// </summary>
+    public partial class Desktop : Window
+    {
+        Model1 db = new Model1();
+        public Desktop()
+        {
+            InitializeComponent();
+            StaticObject.DesktopFrame = DesktopFrame;
+            new Auth().ShowDialog();
+            
+        }
+    }
+}
